@@ -12,6 +12,9 @@ const controls = [
 
 const buildControls = (props) => (
   <div className={classes.BuildControls}>
+    <p>
+      現在の価格は: <strong>{props.price.toFixed(0)}</strong>
+    </p>
     {controls.map((ctrl) => (
       <BuildControl
         key={ctrl.label}
