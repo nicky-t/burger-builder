@@ -5,13 +5,36 @@ import Button from "../../UI/Button/Button";
 
 const orderSummary = (props) => {
   const ingredientSummary = Object.keys(props.ingredients).map((igKey) => {
-    return (
-      <li key={igKey}>
-        <span style={{ textTransform: "capitalize" }}>{igKey}</span>:{" "}
-        {props.ingredients[igKey]}
-      </li>
-    );
+    switch (igKey) {
+      case "salad":
+        return (
+          <li key={igKey}>
+            <span>サラダ</span>： {props.ingredients[igKey]}
+          </li>
+        );
+      case "cheese":
+        return (
+          <li key={igKey}>
+            <span>チーズ</span>： {props.ingredients[igKey]}
+          </li>
+        );
+      case "meat":
+        return (
+          <li key={igKey}>
+            <span>お肉</span>： {props.ingredients[igKey]}
+          </li>
+        );
+      case "bacon":
+        return (
+          <li key={igKey}>
+            <span>ベーコン</span>： {props.ingredients[igKey]}
+          </li>
+        );
+      default:
+        return <li></li>;
+    }
   });
+
   return (
     <Aux>
       <h3>ご注文</h3>
