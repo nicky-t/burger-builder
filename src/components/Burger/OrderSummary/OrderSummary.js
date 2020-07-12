@@ -40,6 +40,9 @@ const orderSummary = (props) => {
       <h3>ご注文</h3>
       <p>このバーガーは、次の材料が入っています：</p>
       <ul>{ingredientSummary}</ul>
+      <p>
+        <strong>合計金額：{props.price}円</strong>
+      </p>
       <p>お支払いを完了しますか？</p>
       <Button btnType="Danger" clicked={props.purchaseCanceled}>
         キャンセル
