@@ -48,7 +48,7 @@ const orderSummary = (props) => {
         キャンセル
       </Button>
       <Button btnType="Success" clicked={props.purchaseContinued}>
-        完了する
+        続ける
       </Button>
     </Aux>
   );
