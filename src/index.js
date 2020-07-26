@@ -11,13 +11,13 @@ import reducer from "./store/reducer";
 const store = createStore(reducer);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
+  <Provider store={store}>
+    <React.StrictMode>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </Provider>
-  </React.StrictMode>,
+    </React.StrictMode>
+  </Provider>,
   document.getElementById("root")
 );
 
