@@ -29,7 +29,7 @@ const buildControls = (props) => (
       disabled={!props.purchasable}
       onClick={props.ordered}
     >
-      注文する
+      {props.isAuth ? "注文する" : "ログインして注文する"}
     </button>
   </div>
 );
